@@ -3,7 +3,7 @@ import Input from "../components/Input";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleSelect from "../components/Select";
-import RadioComponent from "../components/Radio";
+
 import { FormLabel } from "@material-ui/core";
 import ButtonSecondary from "../components/ButtonSecondary";
 const useStyles = makeStyles((theme) => ({
@@ -72,25 +72,6 @@ export default function SignUpForm() {
         <SimpleSelect text="Day" />
         <SimpleSelect text="Year" />
       </Box>
-      {/* <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <FormLabel> Gender ?</FormLabel>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
-        <RadioComponent gender="Male" />
-        <RadioComponent gender="Female" />
-        <RadioComponent gender="Custom" />
-      </Box> */}
       <p>
         By clicking Sign Up, you agree to our Terms, Data Policy and Cookies
         Policy. You may receive SMS Notifications from us and can opt out any
