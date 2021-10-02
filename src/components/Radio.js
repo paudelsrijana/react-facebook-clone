@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "5%",
     padding: "6px",
     marginTop: "10px",
-    marginLeft: "9px",
     cursor: "pointer",
+    width: 170,
   },
   radioButton: {
     marginRight: "0",
@@ -24,7 +24,7 @@ export default function RadioComponent({ gender }) {
     <Box className={classes.genderItem}>
       <Grid container>
         <Grid>
-          <Box component="p" mt="5px" width="95px">
+          <Box component="p" mt="5px">
             {gender}
           </Box>
         </Grid>

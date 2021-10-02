@@ -8,9 +8,10 @@ import { FormLabel } from "@material-ui/core";
 import ButtonSecondary from "../components/ButtonSecondary";
 const useStyles = makeStyles((theme) => ({
   signUpForm: {
-    width: "34%",
+    width: "38%",
     marginLeft: "33%",
-    marginTop: "80px",
+    marginTop: "70px",
+    padding: "20px",
     backgroundColor: "white",
     boxShadow: "0 3px 6px rgb(148, 122, 122)",
     borderRadius: "5%",
@@ -29,15 +30,28 @@ export default function SignUpForm() {
       >
         <label
           style={{
-            marginLeft: "27px",
-            paddingTop: "10px",
             fontSize: "30px",
             fontWeight: "bold",
           }}
         >
           Sign up
         </label>
-        <label style={{ marginLeft: "27px" }}>It’s quick and easy.</label>
+        <label>It’s quick and easy.</label>
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
+        <Input inputText="First Name" />
+        <Input inputText="Last Name" />
+      </Box>
+      <Box>
+        <Input inputText="Mobile Number or Email" />
+        <Input inputText="New Password" />
       </Box>
 
       <Box
@@ -46,27 +60,12 @@ export default function SignUpForm() {
           flexDirection: "row",
         }}
       >
-        <Input inputText="First Name" className={classes.firstName} />
-        <Input inputText="Last Name" className={classes.lastName} />
-      </Box>
-      <Input inputText="Mobile Number or Email" />
-      <Input inputText="New Password" />
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          ml: "30px",
-          mt: "10px",
-        }}
-      >
         <FormLabel>Birthday ?</FormLabel>
       </Box>
       <Box
         sx={{
           display: "flex",
           flexDirection: "row",
-          ml: "20px",
-          bgcolor: "background.paper",
         }}
       >
         <SimpleSelect text="Month" />
@@ -77,8 +76,6 @@ export default function SignUpForm() {
         sx={{
           display: "flex",
           flexDirection: "row",
-          ml: "30px",
-          mt: "10px",
         }}
       >
         <FormLabel> Gender ?</FormLabel>
@@ -87,8 +84,7 @@ export default function SignUpForm() {
         sx={{
           display: "flex",
           flexDirection: "row",
-          ml: "20px",
-          bgcolor: "background.paper",
+          justifyContent: "space-between",
         }}
       >
         <RadioComponent gender="Male" />
