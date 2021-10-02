@@ -5,12 +5,11 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
-      margin: theme.spacing(1),
       backgroundColor: "#42b72a",
       border: "none",
       borderRadius: "6px",
-      fontSize: "17px",
-      lineHeight: "48px",
+      fontSize: "15px",
+      lineHeight: "40px",
       padding: "0 16px",
       color: "white",
     },

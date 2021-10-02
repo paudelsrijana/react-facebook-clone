@@ -13,7 +13,9 @@ const Input = ({ inputText }) => {
     <Box>
       <TextField
         className={classes.textField}
+        id="outlined-size-normal"
         variant="outlined"
+        size="small"
         placeholder={inputText}
         fullWidth
       />

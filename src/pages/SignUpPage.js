@@ -8,7 +8,7 @@ import { FormLabel } from "@material-ui/core";
 import ButtonSecondary from "../components/ButtonSecondary";
 const useStyles = makeStyles((theme) => ({
   signUpForm: {
-    width: "38%",
+    width: "35%",
     marginLeft: "33%",
     marginTop: "70px",
     padding: "20px",
@@ -30,7 +30,7 @@ export default function SignUpForm() {
       >
         <label
           style={{
-            fontSize: "30px",
+            fontSize: "25px",
             fontWeight: "bold",
           }}
         >
@@ -72,7 +72,7 @@ export default function SignUpForm() {
         <SimpleSelect text="Day" />
         <SimpleSelect text="Year" />
       </Box>
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           flexDirection: "row",
@@ -90,7 +90,7 @@ export default function SignUpForm() {
         <RadioComponent gender="Male" />
         <RadioComponent gender="Female" />
         <RadioComponent gender="Custom" />
-      </Box>
+      </Box> */}
       <p>
         By clicking Sign Up, you agree to our Terms, Data Policy and Cookies
         Policy. You may receive SMS Notifications from us and can opt out any

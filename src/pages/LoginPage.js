@@ -9,14 +9,13 @@ const useStyles = makeStyles((theme) => ({
     padding: "50px",
   },
   loginPageText: {
-    marginTop: "13%",
+    marginTop: "12%",
     width: "50%",
     marginLeft: "40px",
-    padding: "0",
   },
   loginForm: {
-    marginTop: "7%",
-    padding: "40px",
+    marginTop: "6%",
+    padding: "20px",
     width: "30%",
     marginLeft: "120px",
     border: "2px solid white",
@@ -26,21 +25,19 @@ const useStyles = makeStyles((theme) => ({
   },
   facebook: {
     color: "#1877f2",
-    fontSize: "60px",
+    fontSize: "50px",
     textAlign: "left",
     margin: "0",
-    height: "90px",
   },
   facebookBelow: {
-    fontSize: "28px",
+    fontSize: "20px",
     fontWeight: "normal",
     textAlign: "left",
     margin: "0",
-    lineHeight: "32px",
   },
   forgotPassword: {
     color: "#1877f2",
-    marginBottom: "25px",
+    marginBottom: "15px",
   },
 }));
 const LoginPage = () => {
