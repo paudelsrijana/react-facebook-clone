@@ -11,9 +11,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "20px",
       lineHeight: "48px",
       padding: "0 16px",
-      width: "400px",
+      marginTop: "10px",
       color: "white",
-      margin: "10px",
     },
   },
 }));
@@ -23,7 +22,7 @@ export default function PrimaryButtons({ children }) {
 
   return (
     <div className={classes.root}>
-      <Button className={classes.button} variant="contained">
+      <Button className={classes.button} variant="contained" fullWidth>
         {children}
       </Button>
     </div>

@@ -6,7 +6,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
       margin: theme.spacing(1),
-      width: "250px",
       backgroundColor: "#42b72a",
       border: "none",
       borderRadius: "6px",
