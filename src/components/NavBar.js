@@ -10,7 +10,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 const useStyles = makeStyles((theme) => ({
   navbar: {
-    padding: "5px 10px",
+    padding: "0px 10px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
@@ -65,9 +65,14 @@ const useStyles = makeStyles((theme) => ({
   profileIconOfUser: {
     display: "flex",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.05)",
-    borderRadius: "700px",
-    padding: " 0 5px",
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "rgba(0, 0, 0, 0.15)",
+      borderRadius: "700px",
+    },
+    "& h5": {
+      margin: " 0 10px",
+    },
   },
   rightNavIcons: {
     color: "black",
