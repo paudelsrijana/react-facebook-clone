@@ -17,12 +17,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PrimaryButtons({ children }) {
+export default function PrimaryButtons({ children, ...rest }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Button className={classes.button} variant="contained" fullWidth>
+      <Button
+        className={classes.button}
+        variant="contained"
+        fullWidth
+        {...rest}
+      >
         {children}
       </Button>
     </div>

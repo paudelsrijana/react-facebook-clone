@@ -1,10 +1,10 @@
 import React from "react";
-import LeftSideBar from "../components/LeftSide";
+import NavBar from "../components/NavBar";
 
 const Button = ({ children, ...rest }) => {
   return (
     <div className="clear">
-      <LeftSideBar />
+      <NavBar />
     </div>
   );
 };

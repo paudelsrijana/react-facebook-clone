@@ -3,7 +3,7 @@ import Input from "../components/Input";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleSelect from "../components/Select";
-
+import { useHistory } from "react-router-dom";
 import { FormLabel } from "@material-ui/core";
 import ButtonSecondary from "../components/ButtonSecondary";
 const useStyles = makeStyles((theme) => ({
@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function SignUpForm() {
   const classes = useStyles();
+  const history = useHistory();
+  const handleSignUp = () => {
+    history.push("/sign-in");
+  };
   return (
     <Box className={classes.signUpForm}>
       <Box
@@ -77,7 +81,7 @@ export default function SignUpForm() {
         Policy. You may receive SMS Notifications from us and can opt out any
         time.
       </p>
-      <ButtonSecondary> Sign Up </ButtonSecondary>
+      <ButtonSecondary onClick={handleSignUp}> Sign Up </ButtonSecondary>
     </Box>
   );
 }

@@ -46,6 +46,9 @@ const LoginPage = () => {
   const handleSignUp = () => {
     history.push("/sign-up-page");
   };
+  const handleLogin = () => {
+    history.push("/home-page");
+  };
   return (
     <div className={classes.loginContainer}>
       <div className={classes.loginPageText}>
@@ -59,7 +62,7 @@ const LoginPage = () => {
         <div>
           <Input inputText="Email or Phone number" />
           <Input inputText="Password" />
-          <Button>Log in</Button>
+          <Button onClick={handleLogin}>Log in</Button>
           <p className={classes.forgotPassword}>forgot Password ?</p>
           <hr width="90%" />
           <ButtonSecondary onClick={handleSignUp}>
