@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     borderRadius: "700px",
     padding: "10px",
+    marginLeft: "10px",
     color: "#828282",
     "& input": {
       border: "none",
@@ -51,10 +52,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#828282",
     display: "flex",
     alignItems: "center",
-    margin: "0px 45px",
+    margin: "0px 50px",
     cursor: "pointer",
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.15)",
+      borderRadius: "40%",
     },
   },
   RightSideOfNavbar: {
@@ -66,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     cursor: "pointer",
+    marginLeft: "20px",
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.15)",
       borderRadius: "700px",

@@ -3,6 +3,7 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import HomePage from "./pages/HomePage";
+import LeftSideBar from "./components/LeftSideBar";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/home-page">
             <HomePage />
+          </Route>
+          <Route path="/sidebar">
+            <LeftSideBar />
           </Route>
           <Route path="/">
             <LoginPage />
