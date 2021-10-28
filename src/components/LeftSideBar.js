@@ -1,14 +1,7 @@
 import LeftSidebarElement from "./LeftSidebarElement.js";
 import { FaGift } from "react-icons/fa";
 import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
-import {
-  FcAlarmClock,
-  FcCalendar,
-  FcConferenceCall,
-  FcSalesPerformance,
-  FcLike,
-} from "react-icons/fc";
-import StoryFeed from "./Story.js";
+import { FcCalendar, FcConferenceCall } from "react-icons/fc";
 import PeopleIcon from "@material-ui/icons/People";
 import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({

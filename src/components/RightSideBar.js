@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     margin: "30px",
     marginLeft: "20px",
+    position: "sticky",
+    right: "0",
+    zIndex: "1",
   },
   friendRequests: {
     width: "250px",
