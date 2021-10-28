@@ -1,7 +1,7 @@
 import React from "react";
 import LeftSideBar from "../components/LeftSideBar";
 import NavBar from "../components/NavBar";
-import StoryFeed from "../components/Story";
+import MiddleSection from "../components/MiddleSection";
 import { makeStyles } from "@material-ui/core";
 import RightSideBar from "../components/RightSideBar";
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +17,7 @@ const HomePage = ({ children, ...rest }) => {
       <NavBar />
       <div className={classes.mainContainer}>
         <LeftSideBar />
-        <StoryFeed />
+        <MiddleSection />
         <RightSideBar />
       </div>
     </div>
