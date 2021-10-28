@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import HomePage from "./pages/HomePage";
 import LeftSideBar from "./components/LeftSideBar";
-
+import StoryFeed from "./components/Story";
 function App() {
   return (
     <div className="App">
@@ -21,6 +21,9 @@ function App() {
           </Route>
           <Route path="/sidebar">
             <LeftSideBar />
+          </Route>
+          <Route path="/story">
+            <StoryFeed />
           </Route>
           <Route path="/">
             <LoginPage />

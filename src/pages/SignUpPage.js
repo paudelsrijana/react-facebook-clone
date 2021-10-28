@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import SimpleSelect from "../components/Select";
 import { useHistory } from "react-router-dom";
 import { FormLabel } from "@material-ui/core";
-import ButtonSecondary from "../components/ButtonSecondary";
+import Button from "../components/Button";
 const useStyles = makeStyles((theme) => ({
   signUpForm: {
     width: "35%",
@@ -81,7 +81,10 @@ export default function SignUpForm() {
         Policy. You may receive SMS Notifications from us and can opt out any
         time.
       </p>
-      <ButtonSecondary onClick={handleSignUp}> Sign Up </ButtonSecondary>
+      <Button onClick={handleSignUp} color="secondary">
+        {" "}
+        Sign Up{" "}
+      </Button>
     </Box>
   );
 }

@@ -1,15 +1,27 @@
 import "font-awesome/css/font-awesome.min.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
-
 import React from "react";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1877f2",
+    },
+    secondary: {
+      main: "#42b72a",
+    },
+  },
+});
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#828282",
     display: "flex",
     alignItems: "center",
-    margin: "0px 50px",
+    margin: "0px 52px",
     cursor: "pointer",
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.15)",
@@ -80,13 +80,13 @@ const useStyles = makeStyles((theme) => ({
   rightNavIcons: {
     color: "black",
     display: "flex",
-    fontSize: "30px",
-    height: "30px",
+    height: "25px",
+    width: "25px",
     padding: "5px",
     alignItems: "center",
     backgroundColor: "#e4e6eb",
     borderRadius: "50%",
-    margin: "10px 15px",
+    margin: "10px 5px",
     cursor: "pointer",
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.15)",
@@ -112,20 +112,20 @@ const NavBar = () => {
       </div>
       <div className={classes.centerOfNavbar}>
         <div className={`${classes.navIcons} ${classes.home}`}>
-          <HomeIcon style={{ fontSize: 30 }} />
+          <HomeIcon style={{ fontSize: 28 }} />
         </div>
         <div className={`${classes.navIcons} ${classes.watch}`}>
-          <OndemandVideoIcon style={{ fontSize: 30 }} />
+          <OndemandVideoIcon style={{ fontSize: 27 }} />
         </div>
         <div className={`${classes.navIcons} ${classes.marketPlace}`}>
-          <AiOutlineShop style={{ fontSize: 30 }} />
+          <AiOutlineShop style={{ fontSize: 25 }} />
         </div>
 
         <div className={`${classes.navIcons} ${classes.groups}`}>
-          <i class="fa fa-users" aria-hidden="true" style={{ fontSize: 25 }} />
+          <i class="fa fa-users" aria-hidden="true" style={{ fontSize: 20 }} />
         </div>
         <div className={`${classes.navIcons} ${classes.gaming}`}>
-          <BsColumns style={{ fontSize: 30 }} />
+          <BsColumns style={{ fontSize: 22 }} />
         </div>
         <div className={classes.RightSideOfNavbar}>
           <div className={classes.profileIconOfUser}>
@@ -134,16 +134,16 @@ const NavBar = () => {
           </div>
         </div>
         <div className={`${classes.rightNavIcons} ${classes.menu}`}>
-          <AppsIcon />
+          <AppsIcon style={{ fontSize: 25 }} />
         </div>
         <div className={`${classes.rightNavIcons} ${classes.messanger}`}>
-          <BsMessenger />
+          <BsMessenger style={{ fontSize: 25 }} />
         </div>
         <div className={`${classes.rightNavIcons} ${classes.notification}`}>
-          <NotificationsIcon />
+          <NotificationsIcon style={{ fontSize: 25 }} />
         </div>
         <div className={`${classes.rightNavIcons} ${classes.account}`}>
-          <ArrowDropDownCircleIcon />
+          <ArrowDropDownCircleIcon style={{ fontSize: 25 }} />
         </div>
       </div>
     </div>

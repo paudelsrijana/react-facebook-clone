@@ -1,5 +1,4 @@
 import Button from "../components/Button";
-import ButtonSecondary from "../components/ButtonSecondary";
 import { makeStyles } from "@material-ui/core/styles";
 import Input from "../components/Input";
 import { useHistory } from "react-router-dom";
@@ -62,12 +61,14 @@ const LoginPage = () => {
         <div>
           <Input inputText="Email or Phone number" />
           <Input inputText="Password" />
-          <Button onClick={handleLogin}>Log in</Button>
+          <Button onClick={handleLogin} color="primary" fullWidth>
+            Log in
+          </Button>
           <p className={classes.forgotPassword}>forgot Password ?</p>
           <hr width="90%" />
-          <ButtonSecondary onClick={handleSignUp}>
+          <Button onClick={handleSignUp} color="secondary">
             Create New Account
-          </ButtonSecondary>
+          </Button>
         </div>
       </form>
     </div>
