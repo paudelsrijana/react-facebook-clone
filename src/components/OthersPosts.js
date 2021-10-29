@@ -2,14 +2,14 @@ import { makeStyles } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import NearMeIcon from "@material-ui/icons/NearMe";
+import GiLobArrow from "react-icons/gi";
 const useStyles = makeStyles((theme) => ({
   container: {
     width: "100%",
     boxShadow: "0 3px 6px rgb(148, 122, 122)",
     marginTop: "15px",
     backgroundColor: "white",
-    borderRadius: "10%",
+    borderRadius: "3%",
     marginBottom: "10px",
   },
   containerTOp: {
@@ -107,7 +107,7 @@ const OthersPosts = () => {
           <p>Comment</p>
         </div>
         <div className={classes.footerOption}>
-          <NearMeIcon />
+          <GiLobArrow />
           <p>Share</p>
         </div>
       </div>
