@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import GiLobArrow from "react-icons/gi";
+import { GiLobArrow } from "react-icons/gi";
 const useStyles = makeStyles((theme) => ({
   container: {
     width: "100%",
