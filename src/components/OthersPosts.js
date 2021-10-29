@@ -107,7 +107,7 @@ const OthersPosts = () => {
           <p>Comment</p>
         </div>
         <div className={classes.footerOption}>
-          <GiLobArrow />
+          <GiLobArrow style={{ fontSize: "25" }} />
           <p>Share</p>
         </div>
       </div>
