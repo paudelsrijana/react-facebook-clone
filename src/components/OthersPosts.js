@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   containerBottom: {
     "& p": {
       marginTop: "0",
+
       paddingTop: "0",
     },
   },
@@ -59,17 +60,6 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "10px",
     },
   },
-  usersInfo: {
-    display: "flex",
-    "& p": {
-      marginLeft: "300px",
-    },
-    postImage: {
-      "& img": {
-        width: "500px",
-      },
-    },
-  },
 }));
 const OthersPosts = () => {
   const classes = useStyles();
@@ -82,7 +72,6 @@ const OthersPosts = () => {
         />
         <div className={classes.usersInfo}>
           <h3>Samikshya Paudel </h3>
-          <p>2h ago</p>
         </div>
       </div>
       <div className={classes.containerBottom}>
@@ -94,6 +83,7 @@ const OthersPosts = () => {
         <img
           src="https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1"
           alt="logo"
+          width="615"
         />
       </div>
 
