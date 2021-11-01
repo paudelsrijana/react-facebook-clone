@@ -61,30 +61,50 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const OthersPosts = () => {
+const postDetails = [
+  {
+    imageUrl:
+      "https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-1/c0.0.320.320a/p320x320/245786494_1615311848807910_8877039673184462069_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CA5mGq5Ev2sAX89grkC&_nc_ht=scontent.fpkr2-1.fna&oh=00e9426de6e002e67075074824c259dc&oe=61801123",
+    name: "Samikshya Paudel",
+    caption:
+      "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
+    postImage:
+      "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+  },
+  {
+    imageUrl:
+      "https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-1/c0.0.320.320a/p320x320/245786494_1615311848807910_8877039673184462069_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CA5mGq5Ev2sAX89grkC&_nc_ht=scontent.fpkr2-1.fna&oh=00e9426de6e002e67075074824c259dc&oe=61801123",
+    name: "Samikshya Paudel",
+    caption:
+      "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
+    postImage:
+      "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+  },
+  {
+    imageUrl:
+      "https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-1/c0.0.320.320a/p320x320/245786494_1615311848807910_8877039673184462069_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CA5mGq5Ev2sAX89grkC&_nc_ht=scontent.fpkr2-1.fna&oh=00e9426de6e002e67075074824c259dc&oe=61801123",
+    name: "Samikshya Paudel",
+    caption:
+      "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
+    postImage:
+      "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+  },
+];
+const Posts = ({ imageUrl, name, caption, postImage }) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
       <div className={classes.containerTOp}>
-        <Avatar
-          src="https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-1/c0.0.320.320a/p320x320/245786494_1615311848807910_8877039673184462069_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CA5mGq5Ev2sAX89grkC&_nc_ht=scontent.fpkr2-1.fna&oh=00e9426de6e002e67075074824c259dc&oe=61801123"
-          className={classes.usersProfile}
-        />
+        <Avatar src={imageUrl} className={classes.usersProfile} />
         <div className={classes.usersInfo}>
-          <h3>Samikshya Paudel </h3>
+          <h3>{name} </h3>
         </div>
       </div>
       <div className={classes.containerBottom}>
-        <p>
-          “Where there is no struggle, there is no strength.” -Oprah Winfrey
-        </p>
+        <p>{caption}</p>
       </div>
       <div className={classes.postImage}>
-        <img
-          src="https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1"
-          alt="logo"
-          width="615"
-        />
+        <img src={postImage} alt="logo" width="615" />
       </div>
 
       <div className={classes.footer}>
@@ -105,4 +125,19 @@ const OthersPosts = () => {
   );
 };
 
-export default OthersPosts;
+export default function OthersPosts() {
+  return (
+    <div>
+      {postDetails.map((item) => {
+        return (
+          <Posts
+            imageUrl={item.imageUrl}
+            name={item.name}
+            caption={item.caption}
+            postImage={item.postImage}
+          />
+        );
+      })}
+    </div>
+  );
+}
