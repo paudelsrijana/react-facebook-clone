@@ -2,6 +2,12 @@ import { Avatar } from "@material-ui/core";
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { GrAdd } from "react-icons/gr";
+import sujata from "../../src/image/sujata.jpg";
+import nawe from "../../src/image/nawe.jpg";
+import ramesh from "../../src/image/ramesh.jpg";
+import tilak from "../../src/image/tilak.jpg";
+import nawaraj from "../../src/image/nawaraj.jpg";
+
 const useStyles = makeStyles((theme) => ({
   userStoryImage: {
     height: "180px",
@@ -60,6 +66,28 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+const storyData = [
+  {
+    profileImage: sujata,
+    userStoryImage: sujata,
+    title: "Sujata Adhikari",
+  },
+  {
+    profileImage: nawe,
+    userStoryImage: nawaraj,
+    title: "Nawaraj Bhandary",
+  },
+  {
+    profileImage: ramesh,
+    userStoryImage: ramesh,
+    title: "Ramesh Syangtyan",
+  },
+  {
+    profileImage: tilak,
+    userStoryImage: tilak,
+    title: "Tilak Kc",
+  },
+];
 function Story({ profileImage, userStoryImage, title }) {
   const classes = useStyles();
   return (
@@ -79,7 +107,7 @@ function StoryFeed() {
     <div className={classes.storyFeedContainer}>
       <div
         style={{
-          backgroundImage: `url("https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/246866638_1022243411677615_5604781981576824806_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=n9TZ7wj-JAcAX8f4k_c&_nc_ht=scontent.fpkr2-1.fna&oh=490d0b223fdbfc4a0ebf395378b3c320&oe=619700DF")`,
+          backgroundImage: `url("https://scontent.fktm1-1.fna.fbcdn.net/v/t39.30808-6/247955429_1022243378344285_470969932257342667_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=bSUMR9lXBN8AX_ueBcC&_nc_ht=scontent.fktm1-1.fna&oh=bdc7d71ea344d28706f125065106a70a&oe=619D7EFE")`,
         }}
         className={`${classes.userStoryImage} ${classes.myStoryImage}`}
       >
@@ -90,26 +118,15 @@ function StoryFeed() {
           <h4>Create story</h4>
         </div>
       </div>
-      <Story
-        profileImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/247140387_408588610863137_3345303757333182293_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=maxjCJbID0EAX-riV6A&_nc_ht=scontent.fpkr2-1.fna&oh=5b8016847b417a658c9c3abb962da3ae&oe=61A02508"
-        userStoryImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/247140387_408588610863137_3345303757333182293_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=maxjCJbID0EAX-riV6A&_nc_ht=scontent.fpkr2-1.fna&oh=5b8016847b417a658c9c3abb962da3ae&oe=61A02508"
-        title="Sujata Adhikari"
-      />
-      <Story
-        profileImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/57935954_1271463909689124_7090610707816775680_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=Fb3caEpA7awAX-GAeNO&_nc_ht=scontent.fpkr2-1.fna&oh=e5a584ac4b5d6a3059694285690f4449&oe=619E4D97"
-        userStoryImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/57935954_1271463909689124_7090610707816775680_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=Fb3caEpA7awAX-GAeNO&_nc_ht=scontent.fpkr2-1.fna&oh=e5a584ac4b5d6a3059694285690f4449&oe=619E4D97"
-        title="Ramesh Syangtan"
-      />
-      <Story
-        profileImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/228280349_3063647310514457_8813709883619372821_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=nuamIPF3N90AX_BZZHz&_nc_ht=scontent.fpkr2-1.fna&oh=ac548804a059b5bd156a26efb93ed468&oe=619E7148"
-        userStoryImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/228280349_3063647310514457_8813709883619372821_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=nuamIPF3N90AX_BZZHz&_nc_ht=scontent.fpkr2-1.fna&oh=ac548804a059b5bd156a26efb93ed468&oe=619E7148"
-        title="Nawaraj Bhandary"
-      />
-      <Story
-        profileImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/243158176_2974894346098233_2846066208134429147_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=-iW3gRrNbdcAX9rzbPt&tn=i6y934-hUdcy2mEP&_nc_ht=scontent.fpkr2-1.fna&oh=634d94d52520f2e2c8fa955999a76d40&oe=619F5A28"
-        userStoryImage="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/243158176_2974894346098233_2846066208134429147_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=-iW3gRrNbdcAX9rzbPt&tn=i6y934-hUdcy2mEP&_nc_ht=scontent.fpkr2-1.fna&oh=634d94d52520f2e2c8fa955999a76d40&oe=619F5A28"
-        title="Tilak Kc"
-      />
+      {storyData.map((item) => {
+        return (
+          <Story
+            profileImage={item.profileImage}
+            userStoryImage={item.userStoryImage}
+            title={item.title}
+          />
+        );
+      })}
     </div>
   );
 }

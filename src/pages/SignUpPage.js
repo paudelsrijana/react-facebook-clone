@@ -2,9 +2,7 @@ import React from "react";
 import Input from "../components/Input";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
-import SimpleSelect from "../components/Select";
 import { useHistory } from "react-router-dom";
-import { FormLabel } from "@material-ui/core";
 import Button from "../components/Button";
 const useStyles = makeStyles((theme) => ({
   signUpForm: {
@@ -58,24 +56,6 @@ export default function SignUpForm() {
         <Input inputText="New Password" />
       </Box>
 
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <FormLabel>Birthday ?</FormLabel>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <SimpleSelect text="Month" />
-        <SimpleSelect text="Day" />
-        <SimpleSelect text="Year" />
-      </Box>
       <p>
         By clicking Sign Up, you agree to our Terms, Data Policy and Cookies
         Policy. You may receive SMS Notifications from us and can opt out any
