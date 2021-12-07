@@ -8,6 +8,7 @@ import { BsColumns, BsMessenger } from "react-icons/bs";
 import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
+import siru from "../../src/image/siru.jpg";
 const useStyles = makeStyles((theme) => ({
   navbar: {
     padding: "0px 10px",
@@ -129,7 +130,7 @@ const NavBar = () => {
         </div>
         <div className={classes.RightSideOfNavbar}>
           <div className={classes.profileIconOfUser}>
-            <Avatar src="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/246866638_1022243411677615_5604781981576824806_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=n9TZ7wj-JAcAX8f4k_c&_nc_ht=scontent.fpkr2-1.fna&oh=490d0b223fdbfc4a0ebf395378b3c320&oe=619700DF" />
+            <Avatar src={siru} />
             <h5>Srîjânâ </h5>
           </div>
         </div>
