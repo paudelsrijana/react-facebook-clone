@@ -3,6 +3,15 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import { FaUserFriends } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
+import { AiOutlineSearch } from "react-icons/ai";
+import { BiVideoPlus } from "react-icons/bi";
+import dadip from "../../src/image/dadip.jpg";
+import siru from "../../src/image/siru.jpg";
+import ramesh from "../../src/image/ramesh.jpg";
+import sujata from "../../src/image/sujata.jpg";
+import tilak from "../../src/image/tilak.jpg";
+import kanxo from "../../src/image/kanxo.jpg";
+import oln from "../../src/image/oln.jpg";
 
 const useStyles = makeStyles((theme) => ({
   RightSideBar: {
@@ -75,6 +84,16 @@ const useStyles = makeStyles((theme) => ({
       padding: "0",
     },
   },
+  contactDetails: {
+    display: "flex",
+    marginTop: "10px",
+    "& h5": {
+      margin: "0",
+      marginTop: "7px",
+      marginLeft: "4px",
+      padding: "0",
+    },
+  },
   notifications: {
     display: "flex",
     marginLeft: "25px",
@@ -92,6 +111,7 @@ const FriendRequests = () => {
     <div className={classes.friendRequests}>
       <div className={classes.requestHeader}>
         <FaUserFriends style={{ fontSize: 20, width: "40%" }} />
+
         <h5 style={{ width: "100%", padding: "0", margin: "0" }}>
           Friend Requests
         </h5>
@@ -99,7 +119,7 @@ const FriendRequests = () => {
       </div>
       <div className={classes.requestDetails}>
         <div width="30%">
-          <Avatar src="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/248800785_145606747791108_7115195208120570965_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=S9OtTqd-On8AX8dWQ_H&_nc_ht=scontent.fpkr2-1.fna&oh=4165c61e8091d4d0dc9faa44b5b41d13&oe=619F4BA0" />
+          <Avatar src={dadip} />
         </div>
         <div className={classes.requestRight}>
           <div className={classes.acceptRequest} width="100%">
@@ -150,7 +170,7 @@ const YourPages = () => {
         />
       </div>
       <div className={classes.pageDetails}>
-        <Avatar src="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/183228497_108518341403445_1131650520051812282_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=qfLG1AyDNhQAX-I91Ld&_nc_ht=scontent.fpkr2-1.fna&oh=f2f218bffcef0da9c9b3781af5c5ab6c&oe=61A06376" />
+        <Avatar src={oln} style={{ height: "30px", width: "30px" }} />
         <h5>Online Lectures in Nepali</h5>
       </div>
       <div className={classes.notifications}>
@@ -164,14 +184,77 @@ const YourPages = () => {
     </div>
   );
 };
+const Contacts = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.yourPages}>
+      <div className={classes.pageHeader}>
+        <h5>Contacts</h5>
+        <BiVideoPlus
+          style={{ fontSize: 20, marginLeft: "50px", marginTop: "7px" }}
+        />
+        <AiOutlineSearch
+          style={{ fontSize: 20, marginLeft: "10px", marginTop: "7px" }}
+        />
+        <BsThreeDots
+          style={{ fontSize: 20, marginLeft: "10px", marginTop: "7px" }}
+        />
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={sujata} style={{ height: "30px", width: "30px" }} />
+        <h5>Sujata Adhikari</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={ramesh} style={{ height: "30px", width: "30px" }} />
+        <h5>Ramesh Syangtan</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={siru} style={{ height: "30px", width: "30px" }} />
+        <h5>Srijana Paudel</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={tilak} style={{ height: "30px", width: "30px" }} />
+        <h5>Tilak Kc</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={kanxo} style={{ height: "30px", width: "30px" }} />
+        <h5>Samikshya Paudel</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={sujata} style={{ height: "30px", width: "30px" }} />
+        <h5>Sujata Adhikari</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={ramesh} style={{ height: "30px", width: "30px" }} />
+        <h5>Ramesh Syangtan</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={siru} style={{ height: "30px", width: "30px" }} />
+        <h5>Srijana Paudel</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={tilak} style={{ height: "30px", width: "30px" }} />
+        <h5>Tilak Kc</h5>
+      </div>
+      <div className={classes.contactDetails}>
+        <Avatar src={kanxo} style={{ height: "30px", width: "30px" }} />
+        <h5>Samikshya Paudel</h5>
+      </div>
+    </div>
+  );
+};
 export default function RightSideBar() {
   const classes = useStyles();
   return (
-    <div className={classes.RightSideBar}>
+    <div
+      className={classes.RightSideBar}
+      style={{ height: "600px", overflowY: "scroll" }}
+    >
       <FriendRequests />
       <hr style={{ width: "250px", marginLeft: "20px" }} />
       <YourPages />
       <hr style={{ width: "250px", marginLeft: "20px" }} />
+      <Contacts />
     </div>
   );
 }
