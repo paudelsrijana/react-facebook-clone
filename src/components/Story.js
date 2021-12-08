@@ -7,7 +7,7 @@ import nawe from "../../src/image/nawe.jpg";
 import ramesh from "../../src/image/ramesh.jpg";
 import tilak from "../../src/image/tilak.jpg";
 import nawaraj from "../../src/image/nawaraj.jpg";
-
+import siru from "../../src/image/siru.jpg";
 const useStyles = makeStyles((theme) => ({
   userStoryImage: {
     height: "180px",
@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     boxShadow: "0 3px 6px rgb(148, 122, 122)",
-
     borderRadius: "10%",
     cursor: "pointer",
     "& h4": {
@@ -107,7 +106,8 @@ function StoryFeed() {
     <div className={classes.storyFeedContainer}>
       <div
         style={{
-          backgroundImage: `url("https://scontent.fktm1-1.fna.fbcdn.net/v/t39.30808-6/247955429_1022243378344285_470969932257342667_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=bSUMR9lXBN8AX_ueBcC&_nc_ht=scontent.fktm1-1.fna&oh=bdc7d71ea344d28706f125065106a70a&oe=619D7EFE")`,
+          //backgroundImage: `url("https://scontent.fktm1-1.fna.fbcdn.net/v/t39.30808-6/247955429_1022243378344285_470969932257342667_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=bSUMR9lXBN8AX_ueBcC&_nc_ht=scontent.fktm1-1.fna&oh=bdc7d71ea344d28706f125065106a70a&oe=619D7EFE")`,
+          userStoryImage: siru,
         }}
         className={`${classes.userStoryImage} ${classes.myStoryImage}`}
       >

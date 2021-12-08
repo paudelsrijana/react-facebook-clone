@@ -19,13 +19,13 @@ const HomePage = ({ children, ...rest }) => {
       <NavBar />
       <div className={classes.mainContainer}>
         <Grid container>
-          <Grid item xs={3}>
+          <Grid item md={3}>
             <LeftSideBar />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item md={6}>
             <MiddleSection />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item md={3}>
             <RightSideBar />
           </Grid>
         </Grid>

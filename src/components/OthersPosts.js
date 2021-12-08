@@ -3,14 +3,18 @@ import { Avatar } from "@material-ui/core";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import { GiLobArrow } from "react-icons/gi";
+import siru from "../../src/image/siru.jpg";
+import like from "../../src/image/like.png";
+
 const useStyles = makeStyles((theme) => ({
   container: {
-    width: "100%",
+    width: "600px",
     boxShadow: "0 3px 6px rgb(148, 122, 122)",
     marginTop: "15px",
     backgroundColor: "white",
     borderRadius: "3%",
     marginBottom: "10px",
+    marginLeft: "5px",
   },
   containerTOp: {
     display: "flex",
@@ -33,14 +37,13 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "10px",
   },
   containerBottom: {
-    "& p": {
-      marginTop: "0",
-
-      paddingTop: "0",
-    },
+    marginLeft: "  5px",
+  },
+  postImage: {
+    marginTop: "10px",
   },
   footer: {
-    padding: "5px",
+    padding: "0px",
     display: "flex",
     justifyContent: "space-evenly",
     borderTop: "1px solid #efefef",
@@ -51,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
   footerOption: {
     display: "flex",
     alignItems: "center",
+    height: "20px",
+    width: "20px",
+    margin: "10px 0",
     "& p": {
       marign: "0",
       marginLeft: "10px",
@@ -58,6 +64,31 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#efefef",
       borderRadius: "10px",
+    },
+  },
+  containerTopp: {
+    display: "flex",
+    alignItems: "center",
+    padding: "0 10px 10px 10px",
+    "& form": {
+      "& input": {
+        outlineWidth: "0",
+        width: "450px",
+        border: "none",
+        padding: "12px 20px",
+        margin: "0 10px",
+        borderRadius: "999px",
+        backgroundColor: "#eff2f5",
+      },
+    },
+  },
+  reactCountContainer: {
+    marginLeft: "10px",
+    display: "flex",
+    height: "30px",
+    "& img": {
+      height: "20px",
+      width: "20px",
     },
   },
 }));
@@ -70,6 +101,7 @@ const postDetails = [
       "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
     postImage:
       "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+    likeCount: "20",
   },
   {
     imageUrl:
@@ -79,6 +111,7 @@ const postDetails = [
       "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
     postImage:
       "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+    likeCount: "20",
   },
   {
     imageUrl:
@@ -88,9 +121,10 @@ const postDetails = [
       "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
     postImage:
       "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+    likeCount: "20",
   },
 ];
-const Posts = ({ imageUrl, name, caption, postImage }) => {
+const Posts = ({ imageUrl, name, caption, postImage, likeCount }) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
@@ -100,13 +134,16 @@ const Posts = ({ imageUrl, name, caption, postImage }) => {
           <h3>{name} </h3>
         </div>
       </div>
-      <div className={classes.containerBottom}>
-        <p>{caption}</p>
-      </div>
+      <div className={classes.containerBottom}>{caption}</div>
       <div className={classes.postImage}>
-        <img src={postImage} alt="logo" width="615" />
+        <img src={postImage} alt="logo" width="600" />
       </div>
-
+      <div className={classes.reactCountContainer}>
+        <div className={classes.reactImage}>
+          <img src={like} alt="like" />
+        </div>
+        <div className={classes.reactCount}>{likeCount}</div>
+      </div>
       <div className={classes.footer}>
         <div className={classes.footerOption}>
           <ThumbUpIcon />
@@ -120,6 +157,12 @@ const Posts = ({ imageUrl, name, caption, postImage }) => {
           <GiLobArrow style={{ fontSize: "25" }} />
           <p>Share</p>
         </div>
+      </div>
+      <div className={classes.containerTopp}>
+        <Avatar src={siru} />
+        <form>
+          <input className="comment" placeholder="Write a comment ..." />
+        </form>
       </div>
     </div>
   );
@@ -135,6 +178,7 @@ export default function OthersPosts() {
             name={item.name}
             caption={item.caption}
             postImage={item.postImage}
+            likeCount={item.likeCount}
           />
         );
       })}

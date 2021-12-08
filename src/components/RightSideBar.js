@@ -6,7 +6,6 @@ import { BsThreeDots } from "react-icons/bs";
 
 const useStyles = makeStyles((theme) => ({
   RightSideBar: {
-    width: "100%",
     margin: "30px",
     marginLeft: "20px",
     position: "sticky",
@@ -15,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   friendRequests: {
     width: "250px",
-    marginLeft: "40px",
+    marginLeft: "20px",
     marginBottom: "20px",
     boxShadow: "0 3px 6px rgb(148, 122, 122)",
     border: "2px solid transparent",
@@ -69,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pageDetails: {
     display: "flex",
-    "& h4": {
+    "& h5": {
       margin: "0",
       marginTop: "7px",
       marginLeft: "4px",
@@ -147,12 +146,12 @@ const YourPages = () => {
       <div className={classes.pageHeader}>
         <h5>Your Pages</h5>
         <BsThreeDots
-          style={{ fontSize: 20, marginLeft: "105px", marginTop: "7px" }}
+          style={{ fontSize: 20, marginLeft: "80px", marginTop: "7px" }}
         />
       </div>
       <div className={classes.pageDetails}>
         <Avatar src="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/183228497_108518341403445_1131650520051812282_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=qfLG1AyDNhQAX-I91Ld&_nc_ht=scontent.fpkr2-1.fna&oh=f2f218bffcef0da9c9b3781af5c5ab6c&oe=61A06376" />
-        <h4>Online Lectures in Nepali</h4>
+        <h5>Online Lectures in Nepali</h5>
       </div>
       <div className={classes.notifications}>
         <IoMdNotificationsOutline style={{ fontSize: "25" }} />
@@ -170,9 +169,9 @@ export default function RightSideBar() {
   return (
     <div className={classes.RightSideBar}>
       <FriendRequests />
-      <hr style={{ width: "280px", marginLeft: "30px" }} />
+      <hr style={{ width: "250px", marginLeft: "20px" }} />
       <YourPages />
-      <hr style={{ width: "280px", marginLeft: "30px" }} />
+      <hr style={{ width: "250px", marginLeft: "20px" }} />
     </div>
   );
 }

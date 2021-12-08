@@ -1,0 +1,6 @@
+.middle-section::-webkit-scrollbar {
+  display: none;
+}
+.leftSideBar::-webkit-scrollbar {
+  display: none;
+}

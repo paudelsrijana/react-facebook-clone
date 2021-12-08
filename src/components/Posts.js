@@ -4,6 +4,7 @@ import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { Avatar } from "@material-ui/core";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import { makeStyles } from "@material-ui/core";
+import siru from "../../src/image/siru.jpg";
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     boxShadow: "0 3px 6px rgb(148, 122, 122)",
@@ -12,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "25px",
     backgroundColor: "white",
     borderRadius: "10px",
-    width: "100%",
+    marginLeft: "5px",
+    width: "600px",
   },
   containerTop: {
     display: "flex",
@@ -50,7 +52,7 @@ const AddPost = () => {
   return (
     <div className={classes.mainContainer}>
       <div className={classes.containerTop}>
-        <Avatar src="https://scontent.fpkr2-1.fna.fbcdn.net/v/t1.6435-9/246866638_1022243411677615_5604781981576824806_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=n9TZ7wj-JAcAX8f4k_c&_nc_ht=scontent.fpkr2-1.fna&oh=490d0b223fdbfc4a0ebf395378b3c320&oe=619700DF" />
+        <Avatar src={siru} />
         <form>
           <input className="status" placeholder="What's on your mind ?" />
         </form>
