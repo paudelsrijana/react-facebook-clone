@@ -1,6 +1,9 @@
-.middle-section::-webkit-scrollbar {
+/* .middle-section::-webkit-scrollbar {
   display: none;
 }
 .leftSideBar::-webkit-scrollbar {
+  display: none;
+} */
+::-webkit-scrollbar {
   display: none;
 }
