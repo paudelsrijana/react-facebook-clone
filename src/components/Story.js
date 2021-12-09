@@ -106,8 +106,7 @@ function StoryFeed() {
     <div className={classes.storyFeedContainer}>
       <div
         style={{
-          //backgroundImage: `url("https://scontent.fktm1-1.fna.fbcdn.net/v/t39.30808-6/247955429_1022243378344285_470969932257342667_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=bSUMR9lXBN8AX_ueBcC&_nc_ht=scontent.fktm1-1.fna&oh=bdc7d71ea344d28706f125065106a70a&oe=619D7EFE")`,
-          userStoryImage: siru,
+          backgroundImage: `url(${siru})`,
         }}
         className={`${classes.userStoryImage} ${classes.myStoryImage}`}
       >

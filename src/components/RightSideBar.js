@@ -15,11 +15,7 @@ import oln from "../../src/image/oln.jpg";
 
 const useStyles = makeStyles((theme) => ({
   RightSideBar: {
-    margin: "30px",
-    marginLeft: "20px",
-    position: "sticky",
-    right: "0",
-    zIndex: "1",
+    margin: "5px 30px 30px 30px",
   },
   friendRequests: {
     width: "250px",
@@ -184,6 +180,19 @@ const YourPages = () => {
     </div>
   );
 };
+const contactDetails = [
+  { image: sujata, name: "Sujata Adhikari" },
+  { image: siru, name: "Srijana Paudel" },
+  { image: ramesh, name: "Ramesh Syangtan" },
+  { image: tilak, name: "Tilak Kc" },
+  { image: kanxo, name: "Samikshya Paudel" },
+  { image: sujata, name: "Sujata Adhikari" },
+  { image: siru, name: "Srijana Paudel" },
+  { image: ramesh, name: "Ramesh Syangtan" },
+  { image: tilak, name: "Tilak Kc" },
+  { image: kanxo, name: "Samikshya Paudel" },
+  { image: sujata, name: "Sujata Adhikari" },
+];
 const Contacts = () => {
   const classes = useStyles();
   return (
@@ -200,46 +209,17 @@ const Contacts = () => {
           style={{ fontSize: 20, marginLeft: "10px", marginTop: "7px" }}
         />
       </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={sujata} style={{ height: "30px", width: "30px" }} />
-        <h5>Sujata Adhikari</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={ramesh} style={{ height: "30px", width: "30px" }} />
-        <h5>Ramesh Syangtan</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={siru} style={{ height: "30px", width: "30px" }} />
-        <h5>Srijana Paudel</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={tilak} style={{ height: "30px", width: "30px" }} />
-        <h5>Tilak Kc</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={kanxo} style={{ height: "30px", width: "30px" }} />
-        <h5>Samikshya Paudel</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={sujata} style={{ height: "30px", width: "30px" }} />
-        <h5>Sujata Adhikari</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={ramesh} style={{ height: "30px", width: "30px" }} />
-        <h5>Ramesh Syangtan</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={siru} style={{ height: "30px", width: "30px" }} />
-        <h5>Srijana Paudel</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={tilak} style={{ height: "30px", width: "30px" }} />
-        <h5>Tilak Kc</h5>
-      </div>
-      <div className={classes.contactDetails}>
-        <Avatar src={kanxo} style={{ height: "30px", width: "30px" }} />
-        <h5>Samikshya Paudel</h5>
-      </div>
+      {contactDetails.map((item) => {
+        return (
+          <div className={classes.contactDetails}>
+            <Avatar
+              src={item.image}
+              style={{ height: "30px", width: "30px" }}
+            />
+            <h5>{item.name}</h5>
+          </div>
+        );
+      })}
     </div>
   );
 };
@@ -248,7 +228,7 @@ export default function RightSideBar() {
   return (
     <div
       className={classes.RightSideBar}
-      style={{ height: "600px", overflowY: "scroll" }}
+      style={{ height: "540px", overflowY: "scroll" }}
     >
       <FriendRequests />
       <hr style={{ width: "250px", marginLeft: "20px" }} />

@@ -23,7 +23,7 @@ export default function LeftSideBar() {
   return (
     <div
       className={classes.leftSideBar}
-      style={{ height: "600px", overflowY: "scroll" }}
+      style={{ height: "540px", overflowY: "scroll" }}
     >
       <LeftSidebarElement src={siru} title="Srîjânâ Pâûđêł" />
       <LeftSidebarElement src={groups} title="Friends" />

@@ -5,6 +5,13 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import { GiLobArrow } from "react-icons/gi";
 import siru from "../../src/image/siru.jpg";
 import like from "../../src/image/like.png";
+import ramesh from "../../src/image/ramesh.jpg";
+import sujata from "../../src/image/sujata.jpg";
+import kanxo from "../../src/image/kanxo.jpg";
+import pic1 from "../../src/image/pic1.jpeg";
+import pic2 from "../../src/image/pic2.jpeg";
+import post from "../../src/image/post.jpeg";
+import pic3 from "../../src/image/pic3.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -94,33 +101,35 @@ const useStyles = makeStyles((theme) => ({
 }));
 const postDetails = [
   {
-    imageUrl:
-      "https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-1/c0.0.320.320a/p320x320/245786494_1615311848807910_8877039673184462069_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CA5mGq5Ev2sAX89grkC&_nc_ht=scontent.fpkr2-1.fna&oh=00e9426de6e002e67075074824c259dc&oe=61801123",
+    imageUrl: kanxo,
     name: "Samikshya Paudel",
     caption:
       "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
-    postImage:
-      "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+    postImage: pic1,
     likeCount: "20",
   },
   {
-    imageUrl:
-      "https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-1/c0.0.320.320a/p320x320/245786494_1615311848807910_8877039673184462069_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CA5mGq5Ev2sAX89grkC&_nc_ht=scontent.fpkr2-1.fna&oh=00e9426de6e002e67075074824c259dc&oe=61801123",
-    name: "Samikshya Paudel",
+    imageUrl: ramesh,
+    name: "Ramesh Syangtan",
     caption:
       "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
-    postImage:
-      "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+    postImage: pic2,
     likeCount: "20",
   },
   {
-    imageUrl:
-      "https://scontent.fpkr2-1.fna.fbcdn.net/v/t39.30808-1/c0.0.320.320a/p320x320/245786494_1615311848807910_8877039673184462069_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CA5mGq5Ev2sAX89grkC&_nc_ht=scontent.fpkr2-1.fna&oh=00e9426de6e002e67075074824c259dc&oe=61801123",
-    name: "Samikshya Paudel",
+    imageUrl: siru,
+    name: "Srijana Paudel",
     caption:
       "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
-    postImage:
-      "https://th.bing.com/th/id/OIP._zvg82wJ4y2kGOUW7XOngQHaEK?pid=ImgDet&rs=1",
+    postImage: pic3,
+    likeCount: "20",
+  },
+  {
+    imageUrl: sujata,
+    name: "Sujata Adhikari",
+    caption:
+      "“Where there is no struggle, there is no strength.” -Oprah Winfrey",
+    postImage: post,
     likeCount: "20",
   },
 ];

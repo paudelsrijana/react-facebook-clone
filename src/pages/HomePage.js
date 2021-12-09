@@ -7,7 +7,7 @@ import RightSideBar from "../components/RightSideBar";
 import { Grid } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    maxHeight: "600px",
+    maxHeight: "540px",
     display: "flex",
     flex: "1",
   },

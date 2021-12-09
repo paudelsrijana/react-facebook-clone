@@ -7,7 +7,7 @@ export default function MiddleSection() {
   return (
     <div
       className="middle-section"
-      style={{ height: "600px", overflowY: "scroll" }}
+      style={{ height: "540px", overflowY: "scroll" }}
     >
       <StoryFeed />
       <AddPost />
