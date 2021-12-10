@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../components/Input";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,8 +18,37 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUpForm() {
   const classes = useStyles();
   const history = useHistory();
+  const [fName, setfName] = useState("");
+  const [lName, setlName] = useState("");
+  const [password, setPassword] = useState("");
+  const [contact, setContact] = useState("");
+
+  const handleFName = (event) => {
+    const { value } = event.target;
+    setfName(value);
+  };
+  const handleLName = (event) => {
+    const { value } = event.target;
+    setlName(value);
+  };
+  const handleContact = (event) => {
+    const { value } = event.target;
+    setContact(value);
+  };
+  const handlePassword = (event) => {
+    const { value } = event.target;
+    setPassword(value);
+  };
   const handleSignUp = () => {
-    history.push("/sign-in");
+    if (
+      fName !== "" &&
+      password !== "" &&
+      lName !== "" &&
+      contact !== "" &&
+      password !== ""
+    ) {
+      history.push("/sign-in");
+    }
   };
   return (
     <Box className={classes.signUpForm}>
@@ -48,12 +77,20 @@ export default function SignUpForm() {
           justifyContent: "space-between",
         }}
       >
-        <Input inputText="First Name" />
-        <Input inputText="Last Name" />
+        <Input inputText="First Name" onChange={handleFName} value={fName} />
+        <Input inputText="Last Name" onChange={handleLName} value={lName} />
       </Box>
       <Box>
-        <Input inputText="Mobile Number or Email" />
-        <Input inputText="New Password" />
+        <Input
+          inputText="Mobile Number or Email"
+          onChange={handleContact}
+          value={contact}
+        />
+        <Input
+          inputText="New Password"
+          onChange={handlePassword}
+          value={password}
+        />
       </Box>
 
       <p>

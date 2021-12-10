@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Button from "../components/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Input from "../components/Input";
@@ -39,14 +40,26 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "15px",
   },
 }));
-const LoginPage = () => {
+const LoginPage = ({ setUser }) => {
   const classes = useStyles();
   const history = useHistory();
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const handleChange = (event) => {
+    const { value } = event.target;
+    setName(value);
+  };
+  const handleChangePassword = (event) => {
+    const { value } = event.target;
+    setPassword(value);
+  };
   const handleSignUp = () => {
     history.push("/sign-up-page");
   };
   const handleLogin = () => {
-    history.push("/home-page");
+    if (name !== "" && password !== "") {
+      history.push("/home-page");
+    }
   };
   return (
     <div className={classes.loginContainer}>
@@ -59,8 +72,16 @@ const LoginPage = () => {
 
       <form className={classes.loginForm}>
         <div>
-          <Input inputText="Email or Phone number" />
-          <Input inputText="Password" />
+          <Input
+            inputText="Email or Phone number"
+            onChange={handleChange}
+            value={name}
+          />
+          <Input
+            inputText="Password"
+            onChange={handleChangePassword}
+            value={password}
+          />
           <Button onClick={handleLogin} color="primary" fullWidth>
             Log in
           </Button>

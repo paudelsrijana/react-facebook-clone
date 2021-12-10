@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "10px",
   },
 }));
-const Input = ({ inputText }) => {
+const Input = ({ inputText, ...rest }) => {
   const classes = useStyles();
   return (
     <Box>
@@ -18,6 +18,7 @@ const Input = ({ inputText }) => {
         size="small"
         placeholder={inputText}
         fullWidth
+        {...rest}
       />
     </Box>
   );
